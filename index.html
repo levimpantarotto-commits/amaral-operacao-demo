@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Demonstração guiada da jornada de atendimento Amaral.">
+  <title>Amaral · Demonstração guiada</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">AMARAL<small>CONSTRUÇÃO E MANUTENÇÃO</small></div>
+    <span class="pill">Demonstração guiada</span>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="title">
+      <div>
+        <p class="kicker">Você conversa. A operação ganha sequência.</p>
+        <h1 id="title">Do pedido à confirmação,<br>em uma jornada visível.</h1>
+        <p class="lede">Esta é uma reprodução guiada de um teste anterior. Ela mostra como as conversas e a operação podem ficar alinhadas — sem conexão com canais, agenda ou inteligência artificial.</p>
+      </div>
+      <button class="button dark" id="start" type="button">▶ Iniciar demonstração</button>
+    </section>
+
+    <p class="notice">Cenário de demonstração: agenda, preços e participantes fictícios. Nenhum contato ou cobrança é realizado.</p>
+
+    <section class="controls" aria-label="Controles da demonstração">
+      <div><span class="eyebrow">Jornada</span><strong id="stage-label">Pronto para iniciar</strong></div>
+      <div class="progress" aria-hidden="true"><span id="progress-fill"></span></div>
+      <div class="control-buttons">
+        <button class="button" id="previous" type="button" disabled>← Voltar</button>
+        <button class="button" id="pause" type="button" disabled>Pausar</button>
+        <button class="button" id="next" type="button" disabled>Avançar →</button>
+        <button class="text-button" id="restart" type="button">Reiniciar</button>
+      </div>
+    </section>
+
+    <div class="grid">
+      <section class="panel conversation" aria-labelledby="conversation-title">
+        <div class="panel-head"><h2 id="conversation-title">Conversa do teste</h2><small id="message-count">0 mensagens exibidas</small></div>
+        <div class="chat-area" id="chat" aria-live="polite">
+          <div class="welcome"><div class="mark">↗</div><h3>Comece pelo pedido,<br>do seu jeito.</h3><p>Quando a demonstração começar, as mensagens do teste aparecem aqui por etapa.</p></div>
+        </div>
+        <div class="composer"><p>Conversa livre com IA não está conectada nesta versão pública.</p></div>
+      </section>
+
+      <aside class="panel operation" aria-labelledby="operation-title">
+        <div class="panel-head"><h2 id="operation-title">A operação acompanha</h2><small>Registro ilustrativo</small></div>
+        <div class="state-body" id="state"><div class="empty">A demonstração revela cada registro somente quando ele entra na jornada.</div></div>
+        <div class="timeline"><h3>Eventos da jornada</h3><div id="events"><div class="empty">Aguardando o início.</div></div></div>
+      </aside>
+    </div>
+
+    <section class="next-step" aria-labelledby="next-title">
+      <div><p class="kicker">Próximo passo</p><h2 id="next-title">Adaptar à sua operação</h2><p>Mapear canais, responsabilidades, agenda e regras comerciais antes de conectar qualquer sistema.</p></div>
+      <a class="button dark" href="#como-funciona">Ver como adaptar</a>
+    </section>
+    <section class="how" id="como-funciona">
+      <h2>O que precisa ser definido</h2>
+      <p>Esta página não representa uma implantação. Ela serve para discutir quais mensagens entram no fluxo, quem aprova orçamento, como a equipe atualiza o serviço e quando o cliente confirma a entrega.</p>
+    </section>
+  </main>
+  <footer>AMARAL · Demonstração estática para conversa de operação.</footer>
+  <script src="app.js"></script>
+</body>
+</html>

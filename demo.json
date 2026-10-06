@@ -1,0 +1,44 @@
+{
+  "title": "Mancha no teto da área de serviço após a chuva",
+  "disclaimer": "Reprodução estática de um teste anterior; nenhum sistema externo está conectado.",
+  "stages": [
+    {"name":"Pedido","phase":"Combinando visita","service":"Manutenção","messageEnd":2,"eventEnd":1,"facts":{"Pedido":"Mancha no teto da área de serviço após a chuva"},"next":"Aguardar a escolha do horário de visita."},
+    {"name":"Visita","phase":"Visita combinada","service":"Manutenção","messageEnd":5,"eventEnd":3,"facts":{"Cliente":"Pedro · simulado","Local":"Sambaqui, Imbituba · cenário ilustrativo","Pedido":"Mancha no teto da área de serviço após a chuva","Visita":"Quarta-feira, 07/10, 10:00 · agenda ilustrativa"},"next":"Aguardar o escopo relatado pela equipe."},
+    {"name":"Orçamento","phase":"Orçamento apresentado","service":"Manutenção","messageEnd":7,"eventEnd":5,"facts":{"Cliente":"Pedro · simulado","Local":"Sambaqui, Imbituba · cenário ilustrativo","Escopo":"Preparar e pintar a área afetada do teto, sem trocar a cobertura."},"quote":true,"next":"Aguardar o aceite do cliente."},
+    {"name":"Aceite e ordem","phase":"Ordem liberada","service":"Manutenção","messageEnd":10,"eventEnd":7,"facts":{"Ordem":"OS-DEMO-001","Responsável":"Equipe de exemplo A","Escopo":"Preparar e pintar a área afetada do teto, sem trocar a cobertura."},"quote":true,"next":"A equipe atualiza o avanço do serviço."},
+    {"name":"Em andamento","phase":"Serviço em andamento","service":"Manutenção","messageEnd":12,"eventEnd":8,"facts":{"Ordem":"OS-DEMO-001","Responsável":"Equipe de exemplo A","Andamento":"Preparação concluída; pintura e limpeza pendentes."},"quote":true,"next":"Aguardar a conclusão informada pela equipe."},
+    {"name":"Conclusão da equipe","phase":"Conferindo a entrega","service":"Manutenção","messageEnd":14,"eventEnd":10,"facts":{"Ordem":"OS-DEMO-001","Andamento":"Preparação, pintura e limpeza concluídas."},"quote":true,"next":"Pedir confirmação final ao cliente."},
+    {"name":"Confirmação do cliente","phase":"Concluído no teste","service":"Manutenção","messageEnd":16,"eventEnd":11,"facts":{"Ordem":"OS-DEMO-001","Resultado":"Cliente confirmou que não há pendências."},"quote":true,"next":"Histórico reunido para revisão do responsável."}
+  ],
+  "messages": [
+    {"role":"client","speaker":"Cliente simulado","text":"Oi, sou o Pedro. Depois da chuva apareceu uma mancha no teto da área de serviço. É em Sambaqui, Imbituba. Vocês podem avaliar?"},
+    {"role":"system","speaker":"Sistema","text":"Já organizei o pedido e o local. Na agenda deste teste há quarta-feira, 07/10, 10:00 ou quarta-feira, 07/10, 14:00. Qual funciona melhor?"},
+    {"role":"client","speaker":"Cliente simulado","text":"Pode marcar quarta-feira, 07/10, 10:00. Confirmo esse horário de avaliação."},
+    {"role":"system","speaker":"Sistema","text":"Combinado para quarta-feira, 07/10, 10:00, na agenda de demonstração. A equipe de exemplo recebeu a descrição e o local. O orçamento vem depois da avaliação."},
+    {"role":"system","speaker":"Sistema","text":"Visita de exemplo: quarta-feira, 07/10, 10:00. Local: Sambaqui, Imbituba. Pedido: Mancha no teto da área de serviço após a chuva. Informe o escopo após avaliar."},
+    {"role":"team","speaker":"Equipe simulada","text":"Fizemos a visita. A causa da umidade já foi resolvida pelo cliente. Propomos preparar e pintar a área afetada do teto, sem trocar a cobertura. Esse é o escopo avaliado no local."},
+    {"role":"system","speaker":"Sistema","text":"A equipe informou o escopo: Preparar e pintar a área afetada do teto, sem trocar a cobertura.. No teste, a avaliação custa R$ 250,00 e o serviço R$ 650,00, total de R$ 900,00. Quer aprovar esse orçamento fictício?"},
+    {"role":"client","speaker":"Cliente simulado","text":"Li o escopo e aprovo esse orçamento de R$ 900. Pode liberar o serviço combinado."},
+    {"role":"system","speaker":"Sistema","text":"Aceite registrado. Criei a ordem com o escopo combinado e deixei o contexto para a equipe de exemplo. Vou acompanhar o avanço por aqui."},
+    {"role":"system","speaker":"Sistema","text":"Nova ordem OS-DEMO-001: Preparar e pintar a área afetada do teto, sem trocar a cobertura.. Cliente e local estão na ficha. Registre o andamento e qualquer impedimento antes de alterar o escopo."},
+    {"role":"team","speaker":"Equipe simulada","text":"A preparação da superfície está concluída. Ainda falta aplicar a pintura e fazer a limpeza final."},
+    {"role":"system","speaker":"Sistema","text":"Andamento registrado na ordem. As pendências seguem visíveis para acompanhamento."},
+    {"role":"team","speaker":"Equipe simulada","text":"Terminamos a preparação e a pintura previstas na ordem. A limpeza também foi feita. Serviço concluído pela equipe; aguardamos o cliente conferir."},
+    {"role":"system","speaker":"Sistema","text":"A equipe informou que terminou o serviço combinado. Você conseguiu conferir? Ficou alguma pendência?"},
+    {"role":"client","speaker":"Cliente simulado","text":"Conferi a pintura e a limpeza. Está tudo certo, não ficou nenhuma pendência. Pode encerrar."},
+    {"role":"system","speaker":"Sistema","text":"Obrigado por confirmar. Encerrei a ordem deste teste e reuni pedido, orçamento, aceite e registros da equipe no histórico."}
+  ],
+  "events": [
+    {"title":"Mensagem recebida no teste","detail":"Entrada do cliente simulado"},
+    {"title":"Disponibilidade local consultada","detail":"Agenda de demonstração, separada de compromissos reais."},
+    {"title":"Horário reservado na agenda de teste","detail":"Quarta-feira, 07/10, 10:00"},
+    {"title":"Orçamento montado automaticamente","detail":"Tabela fictícia do teste; não representa preços da Amaral."},
+    {"title":"Resposta preparada e exibida","detail":"Conversa de teste · cliente"},
+    {"title":"Ordem criada e encaminhada no teste","detail":"OS-DEMO-001"},
+    {"title":"Resposta preparada e exibida","detail":"Conversa de teste · equipe"},
+    {"title":"Relato da equipe incorporado","detail":"A preparação da superfície está concluída. Ainda falta aplicar a pintura e fazer a limpeza final."},
+    {"title":"Relato da equipe incorporado","detail":"Serviço concluído pela equipe; aguardamos o cliente conferir."},
+    {"title":"Resposta preparada e exibida","detail":"Conversa de teste · cliente"},
+    {"title":"Entrega confirmada no teste","detail":"Cliente simulou a confirmação de que não há pendências."}
+  ]
+}
